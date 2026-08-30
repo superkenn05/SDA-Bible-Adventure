@@ -1,0 +1,8 @@
+{
+  "name": "SDA Bible Adventure",
+  "description": "An interactive, educational Seventh-day Adventist Christian games app featuring 10+ game modes, Pathfinder honors, 28 fundamental beliefs, Sabbath challenges, health principles, church history, multiplayer rooms, and offline learning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

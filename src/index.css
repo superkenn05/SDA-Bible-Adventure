@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-base: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-surface-hover: #f1f5f9;
+  --color-bg-card: rgba(255, 255, 255, 0.95);
+  --color-bg-card-hover: #ffffff;
+  --color-bg-inner: #f1f5f9;
+  --color-border: #cbd5e1;
+  --color-border-subtle: #e2e8f0;
+  --color-text-title: #0f172a;
+  --color-text-body: #1e293b;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+}
+
+.dark, :root.dark {
+  --color-bg-base: #020617;
+  --color-bg-surface: #0f172a;
+  --color-bg-surface-hover: #1e293b;
+  --color-bg-card: rgba(255, 255, 255, 0.06);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.10);
+  --color-bg-inner: rgba(15, 23, 42, 0.65);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-text-title: #ffffff;
+  --color-text-body: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+  --color-shadow: rgba(0, 0, 0, 0.45);
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: var(--color-bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 50px var(--color-shadow);
+  }
+  
+  .glass-card {
+    background-color: var(--color-bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px var(--color-shadow);
+  }
+
+  .glass-card:hover {
+    background-color: var(--color-bg-card-hover);
+    border-color: var(--color-border);
+  }
+
+  .glass-pill {
+    background-color: var(--color-bg-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+  }
+
+  .glass-inner {
+    background-color: var(--color-bg-inner);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  /* Universal high contrast theme classes */
+  .theme-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-body);
+    box-shadow: 0 10px 25px var(--color-shadow);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .theme-card-hover {
+    transition: all 0.25s ease-in-out;
+  }
+  .theme-card-hover:hover {
+    background-color: var(--color-bg-card-hover);
+    border-color: var(--color-border);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px var(--color-shadow);
+  }
+
+  .theme-title {
+    color: var(--color-text-title);
+  }
+
+  .theme-text {
+    color: var(--color-text-body);
+  }
+
+  .theme-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .theme-muted {
+    color: var(--color-text-muted);
+  }
+
+  .theme-border {
+    border-color: var(--color-border);
+  }
+
+  .theme-inner {
+    background-color: var(--color-bg-inner);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
